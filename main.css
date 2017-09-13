@@ -537,6 +537,15 @@ h1 {
 	opacity: 0;
 }
 
+/* ----------------------------------------------------------------------- */
+
+
+#soon {
+	background-image: url("stockback2.jpg");
+	background-size: cover;
+
+}
+
 
 
 
