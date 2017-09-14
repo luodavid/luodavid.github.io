@@ -1,4 +1,8 @@
+
 $(function() {
+  if (window.location.href.indexOf('reload')==-1) {
+     window.location.replace(window.location.href+'?reload');
+}
   
 	var blackTop = $("#par5").css('top');
 	var bbheight = $("#par5").css('height');

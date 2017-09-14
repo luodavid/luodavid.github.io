@@ -540,8 +540,15 @@ h1 {
 /* ----------------------------------------------------------------------- */
 
 
-#soon {
-	background-image: url("stockback2.jpg");
+#soon1 {
+	background-image: url("boats.jpeg");
+	background-size: cover;
+
+}
+
+
+#soon2 {
+	background-image: url("bridge.jpeg");
 	background-size: cover;
 
 }
