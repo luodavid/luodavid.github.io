@@ -1,99 +1,134 @@
 
 $(function() {
-  if (window.location.href.indexOf('reload')==-1) {
-     window.location.replace(window.location.href+'?reload');
-}
+
   
-	var blackTop = $("#par5").css('top');
-	var bbheight = $("#par5").css('height');
-  var par1top = $("#par1").css('top');
-  var par1height = $("#par1").css('height');
-	var winHeight = $(window).height();
-	$("#black").css('top', bbheight);
-  $("#aboutdiv").css('top', (parseInt(par1height)*.75) +'px');
-
-  yOffset1=$(window).scrollTop()*.05;
-  yOffset2=$(window).scrollTop()*.25;
-  yOffset3=$(window).scrollTop()*.5;
-  yOffset4=$(window).scrollTop()*1;
-  yOffset5=$(window).scrollTop()*2;
-  $("#par1").css('top', -yOffset1+'px');
-  $("#par2").css('top', -yOffset2+'px');
-  $("#par3").css('top', -yOffset3+'px');
-  $("#par4").css('top', -yOffset4+'px');
-  $("#par5").css('top', -yOffset5+'px');
-
-  $("#idnav").css('top', -yOffset5+'px');
-  $("#smallmenu").css('top', -yOffset5+'px');
-  $("#mySideNav").css('top', -yOffset5+'px');
-  $("#davidlogo").css('top', -yOffset5+'px');
-  var halfpar = (parseInt(par1height))*.75; 
-  $("#aboutdiv").css('top', (halfpar-parseInt(yOffset5))+'px');
-
-  blackTop = $("#par5").css('top');
-  bbheight = $("#par5").css('height');
-
-  var offset = (parseInt(blackTop) + parseInt(bbheight) - 5)+'px';
-  $("#black").css('top', offset);
-
-	$(window).scroll(function(){
-		$(window).height;
-    yOffset1=$(window).scrollTop()*.05;
-  	yOffset2=$(window).scrollTop()*.25;
-  	yOffset3=$(window).scrollTop()*.5;
-  	yOffset4=$(window).scrollTop()*1;
-  	yOffset5=$(window).scrollTop()*2;
-  	$("#par1").css('top', -yOffset1+'px');
-  	$("#par2").css('top', -yOffset2+'px');
-  	$("#par3").css('top', -yOffset3+'px');
-  	$("#par4").css('top', -yOffset4+'px');
-  	$("#par5").css('top', -yOffset5+'px');
-
-    $("#idnav").css('top', -yOffset5+'px');
-    $("#smallmenu").css('top', -yOffset5+'px');
-    $("#mySideNav").css('top', -yOffset5+'px');
-    $("#davidlogo").css('top', -yOffset5+'px');
-    var halfpar = (parseInt(par1height))*.75; 
-    $("#aboutdiv").css('top', (halfpar-parseInt(yOffset5))+'px');
-
-  	blackTop = $("#par5").css('top');
-  	bbheight = $("#par5").css('height');
-
-  	var offset = (parseInt(blackTop) + parseInt(bbheight) - 5)+'px';
-  	$("#black").css('top', offset);
-    
+  $('html, body').css({
+    'overflow': 'hidden',
+    'height': '100%'
   })
 
+  var show = function() {
+    $("#spinner1").fadeOut(500);
+    $("#spinner2").fadeOut(500);
+    $("#overlay").fadeOut(1500);
+
+    $('html, body').css({
+      'overflow': 'auto',
+      'height': 'auto'
+    })
+  }
+
+  setTimeout(show, 2000);
+
+
+  
+  var par1height = $("#par1").css('height');
+  $("#titlediv").css('top', (parseInt(par1height)*.75) +'px');
+
+  var par5height = $("#par5").css('height');
+  $("#about").css('top', par5height);
+
+  var aboutheight = $("#about").css('height');
+  $("#experience").css('top', (parseInt(aboutheight) + parseInt(par5height)));
+
+  var experienceheight = $("#experience").css('height');
+  var experiencetop = $("#experience").css('top');
+  $("#projects").css('top', (parseInt(experienceheight) + parseInt(experiencetop)))
+
+  var projheight = $("#projects").css('height');
+  var projtop = $("#projects").css('top');
+  $("#footspace").css('top', (parseInt(projheight) + parseInt(projtop)))
+
   $(window).on('resize', function(){
-        var win = $(this); //this = window
-        winHeight = win.height();
-        blackTop = $("#par5").css('top');
-        bbheight = $("#par5").css('height');
-        par1top = $("#par1").css('top');
-        par1height = $("#par1").css('height');
-        var offset = (parseInt(blackTop) + parseInt(bbheight) - 5)+'px';
-        var halfpar = (parseInt(par1height))*.75; 
-        $("#aboutdiv").css('top', (halfpar-parseInt(yOffset5))+'px');
-        $("#black").css('top', offset);
+    var par1height = $("#par1").css('height');
+    $("#titlediv").css('top', (parseInt(par1height)*.75) +'px');
+
+    var par5height = $("#par5").css('height');
+    $("#about").css('top', par5height);
+
+    var aboutheight = $("#about").css('height');
+    $("#experience").css('top', (parseInt(aboutheight) + parseInt(par5height)));
+
+    var experienceheight = $("#experience").css('height');
+    var experiencetop = $("#experience").css('top');
+    $("#projects").css('top', (parseInt(experienceheight) + parseInt(experiencetop)))
+
+    var projheight = $("#projects").css('height');
+    var projtop = $("#projects").css('top');
+    $("#footspace").css('top', (parseInt(projheight) + parseInt(projtop)))
+
   });
 
 
+  $(window).scroll(function(){
+    var scroll = $(this).scrollTop();
+    $("#par1").css({
+      'transform' : 'translate(0px, -'+ scroll / 8+'%)'
+    });
+
+    $("#par2").css({
+      'transform' : 'translate(0px, '+ scroll / 8+'%)'
+    });
+
+    $("#par3").css({
+      'transform' : 'translate(0px, '+ scroll / 16+'%)'
+    });
+
+    $("#par4").css({
+      'transform' : 'translate(0px, '+ scroll / 32+'%)'
+    });
+
+    $("#par5").css({
+      'transform' : 'translate(0px, '+ scroll / 128+'%)'
+    });
+
+    $("#titlediv").css({
+      'transform' : 'translate(0px, '+ scroll / 16+'%)'
+    });
+
+    if(scroll > $('.aboutinfo').offset().top - ($(window).height() / 1.4)) {
+      $('.aboutinfo div').each(function(i){
+        var currdiv = $(this);
+        setTimeout(function() {
+          currdiv.addClass('is-showing');
+        }, 200 * (i+1));
+      });
+    }
+
+    if(scroll > $('.expgrid').offset().top - ($(window).height() / 1.4)) {
+      $('#exptitle').addClass('is-showing');
+    }
+
+
+    if(scroll > $('.expgrid').offset().top - ($(window).height() / 1.4)) {
+      $('.expgrid div').each(function(i){
+        var currdiv = $(this);
+        setTimeout(function() {
+          currdiv.addClass('is-showing');
+        }, 200 * (i+1));
+      });
+
+
+    }
+
+    if(scroll > $('.projgrid').offset().top - ($(window).height()) ) {
+      var offset = scroll - $('.projgrid').offset().top + $(window).height() - 400;
+      $('#proj1').css({'transform': 'translate(' + Math.min(0, offset) +'px, 0px'}); 
+      $('#proj3').css({'transform': 'translate(' + Math.min(0, offset - 150) +'px, 0px'}); 
+
+      $('#proj2').css({'transform': 'translate(' + Math.abs(Math.min(0, offset)) +'px, 0px'}); 
+      $('#proj4').css({'transform': 'translate(' + Math.abs(Math.min(0, offset - 150)) +'px, 0px'}); 
+
+      var transparency = offset / 400 + .8;
+      $('#proj1').css({'opacity': transparency })
+      $('#proj2').css({'opacity': transparency })
+      $('#proj3').css({'opacity': transparency })
+      $('#proj4').css({'opacity': transparency })
+
+    }
+
+  })
 })
 
 
-// $(document).ready(function(){
 
-// 	var $window = $(window); //You forgot this line in the above example
-
-// 	$('section[data-type="background"]').each(function(){
-// 		var $bgobj = $(this); // assigning the object
-// 		console.log(this);
-// 		$(window).scroll(function() {
-// 			var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-// 			// Put together our final background position
-// 			var coords = '50% '+ yPos + 'px';
-// 			// Move the background
-// 			$bgobj.css({ backgroundPosition: coords });
-// 		});
-// 	});
-// });

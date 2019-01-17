@@ -1,87 +1,129 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<title>Homepage - David Luo</title>
 		<link rel=stylesheet type="text/css" href="main.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400">
+		<title>About - David Luo</title>
 	</head>
-	<body>
-		<section id="banner">
-			<a href="home.html" class="logo">
+	<body id="par-body">
+		<div id="overlay">
+			<div id="spinner1">
+			</div>
+			<div id="spinner2">
+			</div>
+		</div>
+		<section id="navtop">
+			<a href="#navtop" class="logo" id="davidlogo">
+				<div class="logoimg"></div>
 			</a>
 			<div id="mySidenav" class="sidenav">
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			  <a href="index.html">Home</a>
-			  <a href="about.html">About</a>
-			  <a href="experience.html">Experience</a>
-			  <a href="projects.html">Projects</a>
-			  <a href="skills.html">Skills</a>
+			  <a href="#">Home</a>
+			  <a href="#about">About</a>
+			  <a href="#experience">Experience</a>
+			  <a href="#projects">Projects</a>
 			  <a href="mailto:davidluo@berkeley.edu" target="_blank">Contact</a>
 			</div>
 			<a id="smallmenu" onclick="openNav()">&#9776;</a>
-			<div id="test"></div>
-			<nav class="navparent">
+			<nav class="navparent" id="idnav">
 				<a href="mailto:davidluo@berkeley.edu" class="navs" target="_blank">CONTACT</a>
-				<a href="skills.html" class="navs">SKILLS</a>
-				<a href="projects.html" class="navs">PROJECTS</a>
-				<a href="experience.html" class="navs">EXPERIENCE</a>
-				<a href="about.html" class="navs">ABOUT</a>
-				<a href="index.html" class="navs">HOME</a>
+				<a href="#projects" class="navs">PROJECTS</a>
+				<a href="#experience" class="navs">EXPERIENCE</a>
+				<a href="#about" class="navs">ABOUT</a>
+				<a href="#" class="navs">HOME</a>
 			</nav>
-			<div class="intro" id="parallax">
-				<div class="transp">
-					<h1>DAVID LUO</h1>
-					<h2>DEVELOPER</h2> 
-					<h2> </h2> 
-					<a href="about.html">Who Am I?</a>
+		</section>
+		<div id="titlediv">
+			<h1 id="davidname"> DAVID LUO </h1>
+		</div>
+		<div id="par-container">
+			<div id="par-div1" class="par-div">
+				<img id="par1" src="images/par1.png"/>
+			</div>
+			<div id="par-div2" class="par-div">
+				<img id="par2" src="images/par2.png"/>
+			</div>
+			<div id="par-div3" class="par-div">
+				<img id="par3" src="images/par3.png"/>
+			</div>
+			<div id="par-div4" class="par-div">
+				<img id="par4" src="images/par4.png"/>
+			</div>
+			<div id="par-div5" class="par-div">
+				<img id="par5" src="images/par5.png"/>
+			</div>
+
+
+		</div>
+		<div id="about" class="aboutinfo">
+			<div>
+				<h1 id="abouttitle" class="sectiontitle"> About </h1>
+			</div>
+			<div id="intro-container">
+				<img id="davidpic" src="images/david.jpg"/>
+				<p>
+					My name is David Luo, a senior studying <b>Computer Science</b> at <b>University of California, Berkeley </b> (Graduating <b> May 2019 </b> ). Ever since I was a kid, I've always been fascinated by technology and I've always loved building things, from a LEGO Mindstorms sumo bot to a hands-free EEG helmet controlled text editor or a Java applet platformer game. Throughout the years, I've honed my skills in coding both through taking classes and developing personal projects. The ability to create an interesting video game or a personal website from my bedroom still fascinates me, and I plan to utilize my skills and knowledge to create new technologies that will one day change the world. 
+				</p>
+			</div>
+
+		</div>
+		<div id="experience">
+			<h1 id="exptitle" class="sectiontitle"> Experience </h1>
+			<div class="expgrid">
+				<div> <img src="images/googlelogo.png"> </div>
+				<div> <p> I worked for Google as a Software Developer Intern on the Android Things Proxemics team. I created an application that detected entity distance based only on the images extracted from an Android camera by performing facetracking using OpenCV. I also developed a client demo application for real-time face tracking and distance updates using the Proxemics API.  </p> </div>
+				<div> <img src="images/ndlogo.png"> </div>
+				<div> NeuroDetect's goal was to create mobile brain function diagnostic analytics and tools for brain performance assessment using electroencephalography. I developed an Android application for administering memory, image recognition, and reflex diagnostic tests for concussion patients to measure their recovery progress. </div>
+				<div> <img src="images/ssulogo.png"> </div>
+				<div> I created a classification algorithm for images of Abalone and Nucella larvae in Computer Science Department with Dr. Gurman Gill. By testing different feature detectors, extractors, and image filtering techniques from OpenCV library to maximize accuracy, I was able to achieve an accuracy of 96% for hundreds of larvae images currently being studied in Biology Department using SVM  </div>
+				<div> <img src="images/ssulogo.png"> </div>
+				<div> I researched applications of electroencephalography in Computer Science Department with Dr. Bala Ravikumar. Throughout this summer, I created the P300-Matrix Speller hands-free text editor program through use of Emotiv EPOC headset in MATLAB. I also predicted auditory stimuli based on EEG data by extracting key features from data and applying a machine learning algorithm. </div>
+			</div>
+
+		</div>
+		<div id="projects">
+			<h1 id="projtitle" class="sectiontitle"> Projects </h1>
+			<div class="projgrid">
+				<div id='proj1'> 
+					<h3> BlockJack </h3>
+					<p> • Created Ethereum based online ether gambling smart contract using Solidity <br/>
+					• Developed contract with trustless asset transfer and randomness to ensure no game bias and complete fairness  </p>
+				</div>
+				<div id='proj2'> 
+					<h3> HaRUNbe Endless Runner Game </h3>
+					<p> • Coded and debugged endless runner platformer game applet implemented in Java and controlled through user keyboard inputs <br/>
+					• Integrated character animations and other game assets such as character, item, and background models </p>
+				</div>
+				<div id='proj3'>  
+					<h3> Bear Maps </h3>
+					<p> • Web map application for finding locations of interest and route-planning throughout Berkeley area <br/>
+					• Utilized OpenStreetMap Project data for mapping and A* Searching algorithm for shortest path finding </p>
+				</div>
+				<div id='proj4'> 
+					<h3> Text Editor </h3>
+					<p> • Coded a text editor including a variety of classic text editor features, implementing the JavaFX library <br/>
+					• Allowed for text input, opening and saving files, word wrap, mouse input, window resizing, scrolling and changing font size </p>
 				</div>
 			</div>
-		</section>
-			<div class="image-container topleft">
-				<a href="about.html">
-					<img class ="image" src="pool.jpg"/>
-					<div class="imgbox"></div>
-					<div class="imgtext">ABOUT</div>
-				</a>
-			</div>
-			<div class="image-container topright">
-				<a href="experience.html">
-					<img class ="image" src="code.jpg"/>
-					<div class="imgbox"></div>
-					<div class="imgtext">EXPERIENCE</div>
-				</a>
-			</div>
-			<div class="image-container botleft">
-				<a href="projects.html">
-					<img class ="image" src="office.jpeg"/>
-					<div class="imgbox"></div>
-					<div class="imgtext">PROJECTS</div>
-				</a>
-			</div>
-			<div class="image-container botright">
-				<a href="skills.html">
-					<img class ="image" src="piano.jpg"/>
-					<div class="imgbox"></div>
-					<div class="imgtext">SKILLS</div>
-				</a>
-			</div>
-		  <footer>
-		  	<a href="https://www.linkedin.com/in/david-luo-7b8897142" target="_blank">
-			  	<img class="footer-img" src="linkedin.png">
-				</a>
-		  	<a href="https://github.com/david-r-luo" target="_blank">
-			  	<img class="footer-img" src="github.png">
-				</a>
-		  	<a href="https://drive.google.com/open?id=0BwqjAFK6QuwpT05Ld1U0cWI4OEk" target="_blank">
-			  	<img class="footer-img" src="resumelogo2.png">
-				</a>
-		  	<a href="mailto:davidluo@berkeley.edu" target="_blank">
-			  	<img class="footer-img" src="emailogo.png">
-				</a>
+		</div>
 
-		  </footer>
+	    <div id="footer">
+	    	<a href="https://www.linkedin.com/in/david-luo-7b8897142" target="_blank">
+		    	<img class="footer-img" src="images/linkedin.png">
+			</a>
+	  		<a href="https://github.com/david-r-luo" target="_blank">
+		  		<img class="footer-img" src="images/github.png">
+				</a>
+		  	<a href="https://drive.google.com/open?id=1s6vF9Er9xlCzGLvgdIYSsJ-IQIKw84VG" target="_blank">
+			  	<img class="footer-img" src="images/resumelogo2.png">
+				</a>
+	  		<a href="mailto:davidluo@berkeley.edu" target="_blank">
+		  		<img class="footer-img" src="images/emailogo.png">
+			</a>
+	  	</div>
+
 		<script src="jquery-3.2.1.js"></script>
-		<script type="text/javascript" src="mousemove.js"></script>
+		<script type="text/javascript" src="parallax.js"></script>
 		<script type="text/javascript" src="navmenu.js"></script>
 	</body>
 </html>
