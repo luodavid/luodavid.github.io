@@ -176,7 +176,8 @@ body {
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Poppins"
+  /*, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   color: #222; }
 
 /* Typography
@@ -282,7 +283,6 @@ figure {
 
 .content article {
   padding: 50px 0;
-  max-width: 840px;
   margin: 0 auto;
   text-align: center; }
 
@@ -302,6 +302,8 @@ img {
 .logo {
   height: 100px;
   width: 100%;
+/*  font-family: "Poppins"
+  color: white;*/
   background-image: url(images/4pillarswhite.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -400,18 +402,24 @@ img {
   background-color: rgba(0, 0, 0, .5);
 }
 
+.gallery {
+  background-color: gray;
+  width: 100%;
+  padding: 20%;
+}
+
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    z-index: 1; /* Stay on top */
-    float: right;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    position: relative;
-    display: none;
-    z-index: 5;
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  z-index: 1; /* Stay on top */
+  float: right;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  position: relative;
+  display: none;
+  z-index: 5;
 }
 
 .sidenav a {
@@ -435,7 +443,81 @@ img {
     font-size: 36px;
 }
 
-/*#smallmenu {
+.step-column {
+  float: left;
+  width: 33.33%;
+  height: 800px;
+  background-size: cover;
+  background-position: center;
+  transition: all .7s;
+  transition-timing-function: ease;
+
+  text-align: center;
+
+}
+
+.step-column:hover {
+  background: white;
+  position: relative;
+  transition-timing-function: ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.step-column h1 {
+  color: white;
+  padding: 250px 0px 0px 0px;
+}
+
+.step-column:hover h1 {
+  color: black;
+}
+
+.step-column p {
+  visibility: hidden;
+}
+
+.step-column:hover p {
+  visibility: visible;
+}
+
+.step-1 {
+  background-image: url('images/step1dance.jpg');
+}
+
+.step-2 {
+  background-image: url('images/step2dj.jpg');
+}
+
+.step-3 {
+  background-image: url('images/step3hap.jpg');
+}
+
+.step-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/*
+.overlay {
+  position: relative;
+}
+.overlay .after {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; visibility: hidden; color: #000000; font-size:1.5em; font-weight:400; letter-spacing:-1px; padding-top:3em; }
+
+.overlay:hover .after {
+  visibility: visible; background: rgba(255, 255, 255, .9);-moz-transition: all 0.6s ease-in-out; -webkit-transition: all 0.6s ease-in-out; -o-transition: all 0.6s ease-in-out; -ms-transition: all 0.6s ease-in-out; transition: all 0.6s ease-in-out; }
+*/
+
+
+
+#smallmenu {
   font-size: 36px;
   color: black;
   float: right;
@@ -444,18 +526,18 @@ img {
   right: 0;
   z-index: 2;
 }
-*/
+
 
 .body-info {
   margin: 0px;
   border: 0;
+  background-color: white;
 }
 
 
 .step-image img {
-  max-width: 33%;
-  background-size: cover;
-  /*background-image: url('images/contact1.png');*/
+  max-width: 40%;
+  /*background-size: cover;*/
 
 
 }
@@ -463,9 +545,73 @@ img {
 .step-image img:hover {
     transform: scale(1.2);
     transition-duration: .5s;
-  /*background-size: auto;*/
+    background-size: auto;
+    /*color:#999;       */
+    transition: color 0.5s ease-in-out; /* vendorless fallback */
+    -o-transition: color 0.5s ease-in-out; /* opera */
+    -ms-transition: color 0.5s ease-in-out; /* IE 10 */
+    -moz-transition: color 0.5s ease-in-out; /* Firefox */
+    -webkit-transition: color 0.5s ease-in-out; /*safari and chrome */
 }
 
+
+/*
+*/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+/*  margin-top: 6px;
+  margin-bottom: 16px;*/
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.contact-form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 50px;
+  margin: 0 auto;
+  width: 60%;
+  margin-color: #f2f2f2;
+}
+
+
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 100%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 
 
 

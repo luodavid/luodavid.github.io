@@ -11,11 +11,11 @@
   </head>
   <body>
     <section id=navtop>
-      <a href="#" class="top-logo" id="davidlogo"></a>
+      <a href="#" class="top-logo"></a>
       <nav class="navparent" id="idnav">
         <!-- <a href="#" class="navs">HOME</a> -->
         <a href="#projects" class="navs">PROJECTS</a>
-        <a href="#experience" class="navs">EXPERIENCE</a>
+        <!-- <a href="#experience" class="navs">EXPERIENCE</a> -->
         <a href="#about" class="navs">ABOUT</a>
         <!-- <a href="mailto:davidluo@berkeley.edu" class="navs" target="_blank">CONTACT</a> -->
       </nav>
@@ -30,16 +30,47 @@
       </div> -->
     </section>
     <header class="bg-header">
-      <div class="back-bird"></div>
+      <video autoplay muted loop id="myVideo">
+        <source src="cutvid.mp4" type="video/mp4">
+      </video>
+      <!-- <div class="back-bird"></div> -->
       <div class="logo"></div>
+<!--       <div class="logo">
+        <h1>WE ORCHESTRATE MOMENTS THAT MOVE PEOPLE
+        </h1>
+      </div> -->
       <!-- <div class="fore-bird"></div> -->
     </header>
     <section class="content">
       <article class="body-info">
         <h1>Kosan Kosan Kosan</h1>
         <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+        <hr>
+      </article>
+      <div class="step-row">
+        <div class="step-column step-1">
+          <h1> STEP ONE </h1>          
+          <p> You go do some stuff</p>       
+        </div>
+
+        <div class="step-column step-2">  
+          <h1> STEP TWO </h1> 
+          <p> You go do some other stuff</p>         
+        </div>
+
+        <div class="step-column step-3">  
+          <h1> STEP THREE </h1>     
+          <p> Sick stuff dude</p>       
+        </div>
+      </div>
+      <article class="description-2">
+        <h1>KOSAN KOSAN KOSAN</h1>
+        <hr>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
         <hr>
+      </article>
+      <article class=gallery>
         <div class="clothes-pics">
           <div class="row img-row">
             <figure class="columns four step-image">
@@ -53,23 +84,61 @@
             </figure>
           </div>
           <div class="row img-row">
-            <figure class="columns four"><h3> Step 1 </h3> <p>Plan</p></figure>
-            <figure class="columns four"><h3> Step 2 </h3> <p>Contact</p></figure>
-            <figure class="columns four"><h3> Step 3 </h3> <p>Have Fun</p></figure>
+            <figure class="columns four step-image">
+              <img src="images/step1.png">
+            </figure>
+            <figure class="columns four step-image">
+              <img src="images/step2.png">
+            </figure>
+            <figure class="columns four step-image">
+              <img src="images/step3.png">
+            </figure>
           </div>
-<!--           <div class="row img-row">
+          <div class="row img-row">
+            <figure class="columns four step-image">
+              <img src="images/step1.png">
+            </figure>
+            <figure class="columns four step-image">
+              <img src="images/step2.png">
+            </figure>
+            <figure class="columns four step-image">
+              <img src="images/step3.png">
+            </figure>
+          </div>
+<!--             <figure class="columns four"><h3> Step 1 </h3> <p>Plan</p></figure>
+            <figure class="columns four"><h3> Step 2 </h3> <p>Contact</p></figure>
+            <figure class="columns four"><h3> Step 3 </h3> <p>Have Fun</p></figure> -->
+          <div class="row img-row">
             <figure class="columns four"><img src="images/model3.jpg"></figure>
             <figure class="columns four"><img src="images/model1.jpg"></figure>
             <figure class="columns four"><img src="images/model2.jpg"></figure>
-          </div> -->
+          </div>
         </div>
-        <h1>KOSAN KOSAN KOSAN</h1>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
-        <hr>
-        <div class="large-window"></div>
       </article>
-      <div style="height: 2000px"></div>
+      <div class="large-window"></div>
+      <div style="height: 100px"></div>
+      <div class="contact-form">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <p>You can put some text here:</p>
+        </div>
+        <div class="row">
+<!--           <div class="column">
+            <img src="images/step3.png" style="width:100%">
+          </div> -->
+          <div class="column">
+            <form action="/action_page.php">
+              <label for="fname"> Name</label>
+              <input type="text" id="name" name="fullname" placeholder="Your name..">
+              <label for="lname">Email</label>
+              <input type="text" id="mail" name="email" placeholder="Your email">
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/functions.js"></script>
