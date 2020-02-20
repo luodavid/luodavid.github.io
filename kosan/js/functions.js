@@ -26,12 +26,12 @@ $(window).scroll(function(){
     'transform' : 'translate(0px, -'+ wScroll /40 +'%)'
   });
 
-  if(wScroll > $('.clothes-pics').offset().top - ($(window).height() / 1.2)) {
+  if(wScroll > $('.gallery-pics').offset().top - ($(window).height() / 1.2)) {
 
-    $('.clothes-pics figure').each(function(i){
+    $('.gallery-pics figure').each(function(i){
 
       setTimeout(function(){
-        $('.clothes-pics figure').eq(i).addClass('is-showing');
+        $('.gallery-pics figure').eq(i).addClass('is-showing');
       }, 150 * (i+1));
     });
 
